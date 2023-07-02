@@ -15,13 +15,42 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate('/');
+                saveUser(data.name, data.email)
                 toast.success('successfull you login !!!!')
             })
             .catch(error => {
                 console.error(error)
                 toast.error(error.message)
             })
+    };
+
+    const saveUser = (name, email) => {
+        const user = { name, email };
+        fetch("http://localhost:5000/users", {
+            method: "POST", // or 'PUT'
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user),
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.acknowledged === true){
+                getUserToken(email);
+            }
+        })
+    };
+
+    const getUserToken = email =>{
+        fetch(`http://localhost:5000/jwt?email=${email}`)
+        .then(res => res.json())
+        .then(data =>{
+            if(data.accessToken){
+                localStorage.setItem('accessToken', data.accessToken)
+                navigate('/')
+            }
+        })
     }
 
     return (

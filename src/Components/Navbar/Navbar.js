@@ -8,10 +8,11 @@ const Navbar = () => {
     const items = <>
         <li className='text-white font-bold'><Link to={'/'}>Home</Link></li>
         <li className='text-white font-bold'><Link to={'/products'}>products</Link></li>
-        <li className='text-white font-bold'><Link to={'/myReview'}>My Reviews</Link></li>
+        
         {
             user?.uid ? <>
-
+            <li className='text-white font-bold'><Link to={'/myReview'}>My Reviews</Link></li>
+            <li className='text-white font-bold'><Link to={'/myOrder'}>My Orders</Link></li>
             </> :
                 null
         }

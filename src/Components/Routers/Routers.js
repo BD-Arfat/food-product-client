@@ -11,6 +11,7 @@ import SingleProduct from "../Products/SingleProduct/SingleProduct";
 import PrivetRouters from "../PrivetRouters/PrivetRouters";
 import SingleDrink from "../Products/SingleDrink/SingleDrink";
 import MyReview from "../MyReview/MyReview";
+import MyOrders from "../MyOrders/MyOrders";
 
 export const router = createBrowserRouter([
     {
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
             {
                 path : '/myReview',
                 element : <MyReview/>
+            },
+            {
+                path : '/myOrder',
+                element : <MyOrders/>
             },
             {
                 path : '/products/:id',

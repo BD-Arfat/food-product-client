@@ -13,6 +13,7 @@ const Navbar = () => {
             user?.uid ? <>
             <li className='text-white font-bold'><Link to={'/myReview'}>My Reviews</Link></li>
             <li className='text-white font-bold'><Link to={'/myOrder'}>My Orders</Link></li>
+            <li className='text-white font-bold'><Link to={'/dashbord'}>Dashbord</Link></li>
             </> :
                 null
         }

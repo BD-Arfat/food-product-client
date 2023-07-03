@@ -12,6 +12,10 @@ import PrivetRouters from "../PrivetRouters/PrivetRouters";
 import SingleDrink from "../Products/SingleDrink/SingleDrink";
 import MyReview from "../MyReview/MyReview";
 import MyOrders from "../MyOrders/MyOrders";
+import DashbordLaouts from "../Dashbord/DashbordLaouts/DashbordLaouts";
+import AllUsers from "../Dashbord/AllUsers/AllUsers";
+import AddProduct from "../Dashbord/AddProduct/AddProduct";
+import YourProdcut from "../Dashbord/YourProduct/YourProdcut";
 
 export const router = createBrowserRouter([
     {
@@ -36,6 +40,24 @@ export const router = createBrowserRouter([
                 path: '/products/drinkProducts',
                 element: <DrinkFood />
             },
+        ]
+    },
+    {
+        path : '/dashbord',
+        element : <DashbordLaouts/>,
+        children : [
+            {
+                path :'/dashbord',
+                element : <AllUsers/>
+            },
+            {
+                path :'/dashbord/addProduct',
+                element : <AddProduct/>
+            },
+            {
+                path : '/dashbord/yourProduct',
+                element : <YourProdcut/>
+            }
         ]
     },
     {

@@ -6,7 +6,11 @@ const FoodProducts = () => {
     const {data : product=[]} = useQuery({
         queryKey : ['product'],
         queryFn : async()=>{
-            const res = await fetch('http://localhost:5000/products');
+            const res = await fetch('http://localhost:5000/products',{
+                headers : {
+                    authoriZation : `bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
             const data =await res.json();
             return data;
         }

@@ -30,6 +30,22 @@ const AllUsers = () => {
             })
            
         }
+    };
+
+    const handelAdmin = (id) =>{
+        fetch(`http://localhost:5000/users/admin/${id}`,{
+            method : 'PUT',
+            headers : {
+                authoriZation : `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.modifiedCount > 0){
+                refetch()
+                toast.success('Hey you just made another seller')
+            }
+        })
     }
 
     return (
@@ -56,7 +72,7 @@ const AllUsers = () => {
                                 <th className='font-bold text-white'>{i+1}</th>
                                 <td className='font-bold text-white'>{items.name}</td>
                                 <td className='font-bold text-white'>{items.email}</td>
-                                <td><button className='btn btn-sm btn-success'>Add Seller</button></td>
+                                <td>{ items?.role !== 'admin' && <button onClick={()=>handelAdmin(items._id)} className='btn btn-sm btn-success'>Add Seller</button>}</td>
                                 <td><button onClick={()=>handelDelete(items._id)} className='btn btn-sm btn-error'>Delete USer</button></td>
                             </tr>)
                         }

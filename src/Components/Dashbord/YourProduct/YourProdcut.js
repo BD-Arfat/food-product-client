@@ -11,7 +11,11 @@ const YourProdcut = () => {
     const { data: addProduct = [], refetch } = useQuery({
         queryKey: ['addProduct', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/product?email=${user?.email}`);
+            const res = await fetch(`http://localhost:5000/product?email=${user?.email}`,{
+                headers : {
+                    authoriZation : `bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
             const data = await res.json();
             return data;
         }
@@ -54,7 +58,7 @@ const YourProdcut = () => {
                         </thead>
                         <tbody>
                             {/* row 1 */}
-                            {
+                            { addProduct.length > 0 &&
                                 addProduct.map((items, i) => <tr key={items._id}>
                                     <th className=' text-white'>{i + 1}</th>
                                     <td>

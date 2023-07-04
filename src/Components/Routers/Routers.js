@@ -16,6 +16,7 @@ import DashbordLaouts from "../Dashbord/DashbordLaouts/DashbordLaouts";
 import AllUsers from "../Dashbord/AllUsers/AllUsers";
 import AddProduct from "../Dashbord/AddProduct/AddProduct";
 import YourProdcut from "../Dashbord/YourProduct/YourProdcut";
+import AdminRouts from "../PrivetRouters/AdminRouts/AdminRouts";
 
 export const router = createBrowserRouter([
     {
@@ -48,15 +49,15 @@ export const router = createBrowserRouter([
         children : [
             {
                 path :'/dashbord',
-                element : <AllUsers/>
+                element : <AdminRouts><AllUsers/></AdminRouts>
             },
             {
                 path :'/dashbord/addProduct',
-                element : <AddProduct/>
+                element : <AdminRouts><AddProduct/></AdminRouts>
             },
             {
                 path : '/dashbord/yourProduct',
-                element : <YourProdcut/>
+                element : <AdminRouts><YourProdcut/></AdminRouts>
             }
         ]
     },

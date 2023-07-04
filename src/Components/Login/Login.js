@@ -4,19 +4,26 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
+import useToken from '../../Hooks/UseToken';
 
 const Login = () => {
 
     const { loginUser } = useContext(AuthContext)
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
+    const [loginUserToken, setLoginUserToken] = useState('');
+    const [token] = useToken(loginUserToken);
+
+    if(token){
+        navigate('/')
+    }
 
     const handleLogin = (data) => {
         loginUser(data.email, data.password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate('/');
+                setLoginUserToken(data.email)
                 toast.success('successfull you login !!!!')
             })
             .catch(error => {

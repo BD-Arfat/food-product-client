@@ -1,21 +1,30 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
+import useAdmin from '../../Hooks/UseAdmin';
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext)
+    const [isAdmin] = useAdmin(user?.email)
 
     const items = <>
         <li className='text-white font-bold'><Link to={'/'}>Home</Link></li>
         <li className='text-white font-bold'><Link to={'/products'}>products</Link></li>
-        
+
         {
             user?.uid ? <>
-            <li className='text-white font-bold'><Link to={'/myReview'}>My Reviews</Link></li>
-            <li className='text-white font-bold'><Link to={'/myOrder'}>My Orders</Link></li>
-            <li className='text-white font-bold'><Link to={'/dashbord'}>Dashbord</Link></li>
+                <li className='text-white font-bold'><Link to={'/myReview'}>My Reviews</Link></li>
+                <li className='text-white font-bold'><Link to={'/myOrder'}>My Orders</Link></li>
+
             </> :
                 null
+        }
+        {
+            isAdmin &&
+            <>
+                <li className='text-white font-bold'><Link to={'/dashbord'}>Dashbord</Link></li>
+            </>
+
         }
     </>
 

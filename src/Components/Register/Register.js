@@ -1,14 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../Context/AuthProvider';
 import { toast } from 'react-hot-toast';
 import form from '../../image/form.png'
 import { Link, useNavigate } from 'react-router-dom';
+import useToken from '../../Hooks/UseToken';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
+    const [createUserEmail, setCreateUserEmail] = useState('')
+    const [token] = useToken(createUserEmail);
+
+    if(token){
+        navigate('/')
+    }
 
     const handlelRegister = (data) => {
         createUser(data.email, data.password)
@@ -37,22 +44,13 @@ const Register = () => {
         .then(data => {
             console.log(data);
             if(data.acknowledged === true){
-                getUserToken(email);
+                // getUserToken(email);
+                setCreateUserEmail(email)
             }
         })
     };
 
-    const getUserToken = email =>{
-        fetch(`http://localhost:5000/jwt?email=${email}`)
-        .then(res => res.json())
-        .then(data =>{
-            if(data.accessToken){
-                localStorage.setItem('accessToken', data.accessToken)
-                navigate('/')
-            }
-        })
-    }
-
+    
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row">

@@ -17,6 +17,7 @@ import AllUsers from "../Dashbord/AllUsers/AllUsers";
 import AddProduct from "../Dashbord/AddProduct/AddProduct";
 import YourProdcut from "../Dashbord/YourProduct/YourProdcut";
 import AdminRouts from "../PrivetRouters/AdminRouts/AdminRouts";
+import About from "../About/About";
 
 export const router = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />
-            },
+            }
         ]
     },
     {
@@ -89,6 +90,10 @@ export const router = createBrowserRouter([
                 path : '/drinks/:id',
                 element : <SingleDrink/>,
                 loader : ({params})=>fetch(`http://localhost:5000/drinks/${params.id}`)
+            },
+            {
+                path : '/about',
+                element : <About/>
             }
         ]
     }

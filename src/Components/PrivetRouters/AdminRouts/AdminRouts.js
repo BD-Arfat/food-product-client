@@ -11,7 +11,7 @@ const AdminRouts = ({ children }) => {
     if (user && isAdmin) {
         return children;
     };
-    if (loding && isAdminLoding) {
+    if (loding || isAdminLoding) {
         return <button className="btn">
             <span className="loading loading-spinner"></span>
             loading

@@ -9,6 +9,7 @@ const Navbar = () => {
 
     const items = <>
         <li className='text-white font-bold'><Link to={'/'}>Home</Link></li>
+        <li className='text-white font-bold'><Link to={'/about'}>Abouts</Link></li>
         <li className='text-white font-bold'><Link to={'/products'}>products</Link></li>
 
         {

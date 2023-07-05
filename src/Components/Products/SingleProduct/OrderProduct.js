@@ -12,11 +12,13 @@ const OrderProduct = () => {
     const handelSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
+        const userName = form.userName.value;
         const name = form.name.value;
         const email = form.email.value;
         const review = form.review.value;
 
         const data = {
+            userName : userName,
             name: name,
             email: email,
             review: review,
@@ -49,6 +51,12 @@ const OrderProduct = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <form onSubmit={handelSubmit} className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
                         <div className="card-body">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">User Name</span>
+                                </label>
+                                <input type="text" name='userName'placeholder="Type here" className="input input-bordered input-warning w-96" />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Product Name</span>

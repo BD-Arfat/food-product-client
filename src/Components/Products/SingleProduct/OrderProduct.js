@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthProvider';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 
 const OrderProduct = () => {
 
     const { user } = useContext(AuthContext)
 
-    const {_id, name} = useLoaderData()
+    const {_id, name} = useLoaderData();
+    const navigate = useNavigate()
 
     const handelSubmit = (e) => {
         e.preventDefault();
@@ -37,7 +38,8 @@ const OrderProduct = () => {
             console.log(data)
             if(data.acknowledged === true){
                 form.reset()
-                toast.success(`Thank you for your review`)
+                toast.success(`Thank you for your review`);
+                navigate('/myReview')
             }
         })
 
@@ -55,7 +57,7 @@ const OrderProduct = () => {
                                 <label className="label">
                                     <span className="label-text">User Name</span>
                                 </label>
-                                <input type="text" name='userName'placeholder="Type here" className="input input-bordered input-warning w-96" />
+                                <input type="text" name='userName'placeholder="Type here" className="input input-bordered input-warning w-96" required  />
                             </div>
                             <div className="form-control">
                                 <label className="label">

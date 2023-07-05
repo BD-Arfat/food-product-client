@@ -3,11 +3,23 @@ import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import { toast } from 'react-hot-toast';
 import OrderDrink from './OrderDrink';
+import { useQuery } from 'react-query';
+import Review from '../SingleProduct/Review';
 
 const SingleDrink = () => {
-    const {name, image, price, _id} = useLoaderData()
+    const {name, image, price, _id} = useLoaderData();
+    const {user} = useContext(AuthContext);
 
-    const {user} = useContext(AuthContext)
+    const {data : product=[], refetch} = useQuery({
+        queryKey : ['product'],
+        queryFn : async()=>{
+            const res = await fetch(`http://localhost:5000/reviews/${_id}`,{
+                
+            });
+            const data =await res.json();
+            return data;
+        }
+    })
 
     const navigate = useNavigate()
    
@@ -31,6 +43,7 @@ const SingleDrink = () => {
             console.log(data)
             if(data.acknowledged === true){
                 toast.success(`Thank you for ordering our products`)
+                refetch()
                 navigate('/myOrder')
             }
         })
@@ -54,6 +67,11 @@ const SingleDrink = () => {
                 </div>
                 <div className='w-1/2 mt-16'>
                    <h1 className='font-bold text-white text-4xl'>These are our reviews of this dish</h1>
+                   <div className='mt-8 gap-5'>
+                        {
+                            product.map(items => <Review key={items._id} items={items}/>)
+                        }
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,21 +1,25 @@
 import React, { useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import { AuthContext } from '../../Context/AuthProvider';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 
 const OrderDrink = () => {
 
-    const {name, image, price, _id} = useLoaderData()
-    const { user } = useContext(AuthContext)
+    const { name, image, price, _id, } = useLoaderData()
+    const { user } = useContext(AuthContext);
+    const navigate = useNavigate()
+    
 
     const handelSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
+        const userName = form.userName.value;
         const name = form.name.value;
         const email = form.email.value;
         const review = form.review.value;
 
         const data = {
+            userName : userName,
             name: name,
             email: email,
             review: review,
@@ -29,14 +33,15 @@ const OrderDrink = () => {
             },
             body: JSON.stringify(data),
         })
-        .then(res => res.json())
-        .then(data =>{
-            console.log(data)
-            if(data.acknowledged === true){
-                form.reset()
-                toast.success(`Thank you for your review`)
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged === true) {
+                    form.reset()
+                    toast.success(`Thank you for your review`);
+                    navigate('/myReview')
+                }
+            })
 
     }
 
@@ -48,6 +53,12 @@ const OrderDrink = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <form onSubmit={handelSubmit} className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
                         <div className="card-body">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">User Name</span>
+                                </label>
+                                <input type="text" name='userName' required placeholder="Type here" className="input input-bordered input-warning w-96" />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Product Name</span>
@@ -67,7 +78,7 @@ const OrderDrink = () => {
                                 <textarea name='review' type='text' className="textarea textarea-warning w-96" required placeholder="Write a review"></textarea>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-warning">Submit</button>
+                                <button  className="btn btn-warning">Submit</button>
                             </div>
                         </div>
                     </form>

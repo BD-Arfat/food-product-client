@@ -18,6 +18,7 @@ import AddProduct from "../Dashbord/AddProduct/AddProduct";
 import YourProdcut from "../Dashbord/YourProduct/YourProdcut";
 import AdminRouts from "../PrivetRouters/AdminRouts/AdminRouts";
 import About from "../About/About";
+import Payment from "../Dashbord/Payment/Payment";
 
 export const router = createBrowserRouter([
     {
@@ -45,20 +46,20 @@ export const router = createBrowserRouter([
         ]
     },
     {
-        path : '/dashbord',
-        element : <DashbordLaouts/>,
-        children : [
+        path: '/dashbord',
+        element: <DashbordLaouts />,
+        children: [
             {
-                path :'/dashbord',
-                element : <AdminRouts><AllUsers/></AdminRouts>
+                path: '/dashbord',
+                element: <AdminRouts><AllUsers /></AdminRouts>
             },
             {
-                path :'/dashbord/addProduct',
-                element : <AdminRouts><AddProduct/></AdminRouts>
+                path: '/dashbord/addProduct',
+                element: <AdminRouts><AddProduct /></AdminRouts>
             },
             {
-                path : '/dashbord/yourProduct',
-                element : <AdminRouts><YourProdcut/></AdminRouts>
+                path: '/dashbord/yourProduct',
+                element: <AdminRouts><YourProdcut /></AdminRouts>
             }
         ]
     },
@@ -74,26 +75,26 @@ export const router = createBrowserRouter([
                 element: <Register />
             },
             {
-                path : '/myReview',
-                element : <MyReview/>
+                path: '/myReview',
+                element: <MyReview />
             },
             {
-                path : '/myOrder',
-                element : <MyOrders/>
+                path: '/myOrder',
+                element: <MyOrders />
             },
             {
-                path : '/products/:id',
-                element : <SingleProduct/>,
-                loader : ({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+                path: '/products/:id',
+                element: <SingleProduct />,
+                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
             },
             {
-                path : '/drinks/:id',
-                element : <SingleDrink/>,
-                loader : ({params})=>fetch(`http://localhost:5000/drinks/${params.id}`)
+                path: '/drinks/:id',
+                element: <SingleDrink />,
+                loader: ({ params }) => fetch(`http://localhost:5000/drinks/${params.id}`)
             },
             {
-                path : '/about',
-                element : <About/>
+                path: '/about',
+                element: <About />
             }
         ]
     }

@@ -28,6 +28,7 @@ const SingleProduct = () => {
    
     const handlerSubmit = () =>{
         const data = {
+            service : _id,
             name: name,
             image: image,
             price: price,

@@ -25,6 +25,7 @@ const SingleDrink = () => {
    
     const handlerSubmit = () =>{
         const data = {
+            service : _id,
             name: name,
             image: image,
             price: price,
@@ -56,7 +57,7 @@ const SingleDrink = () => {
                 <div>
                     <img src={image} className='w-[500px] h-[500px]' alt="" />
                     <h1 className='text-white font-bold text-2xl text-justify ms-10'>Name : {name} </h1>
-                    <p className='text-white font-bold text-justify ms-10 text-xl mt-4'>Price : {price} </p>
+                    <p className='text-white font-bold text-justify ms-10 text-xl mt-4'>Price : {price}$ </p>
                     <div className=' text-justify ms-10 mt-4'>
                         <button onClick={handlerSubmit} className='w-96  btn btn-warning'>Add to cart</button>
                     </div>

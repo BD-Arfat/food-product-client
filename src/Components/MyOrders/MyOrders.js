@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useQuery } from 'react-query';
 import { AuthContext } from '../Context/AuthProvider';
 import { toast } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 const MyOrders = () => {
 
@@ -70,7 +71,7 @@ const MyOrders = () => {
                                     <td>{items.email}</td>
                                     <td className='text-white font-bold'>{items.price}$</td>
                                     <td><button onClick={()=>hendelDelete(items._id)} className='btn btn-sm btn-error'>Delete</button></td>
-                                    <td><button className='btn btn-sm btn-success'>Payment</button></td>
+                                    <td><Link  className='btn btn-sm btn-success'>Payment</Link></td>
                                 </tr>)
                             }
                         </tbody>

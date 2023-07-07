@@ -14,9 +14,7 @@ const MyOrders = () => {
         queryKey: ['orders', user?.email],
         queryFn: async () => {
             const res = await fetch(url,{
-                headers : {
-                    authoriZation : `bearer ${localStorage.getItem('accessToken')}`
-                }
+                
             });
             const data = await res.json();
             return data;
@@ -71,7 +69,7 @@ const MyOrders = () => {
                                     <td>{items.email}</td>
                                     <td className='text-white font-bold'>{items.price}$</td>
                                     <td><button onClick={()=>hendelDelete(items._id)} className='btn btn-sm btn-error'>Delete</button></td>
-                                    <td><Link  className='btn btn-sm btn-success'>Payment</Link></td>
+                                    <td><Link to={`/payment/${items._id}`}  className='btn btn-sm btn-success'>Payment</Link></td>
                                 </tr>)
                             }
                         </tbody>

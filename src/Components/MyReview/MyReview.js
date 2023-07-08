@@ -7,7 +7,7 @@ const MyReview = () => {
 
     const {user} = useContext(AuthContext);
 
-    const url = `http://localhost:5000/review?email=${user?.email}`
+    const url = `https://food-products-server.vercel.app/review?email=${user?.email}`
 
     const {data : product=[], refetch} = useQuery({
         queryKey : ['product', user?.email],
@@ -21,7 +21,7 @@ const MyReview = () => {
     const handelDelete = (id) =>{
         const proceeed = window.confirm(`Do you really want to delete this product?`);
         if(proceeed){
-            fetch(`http://localhost:5000/review/${id}`, {
+            fetch(`https://food-products-server.vercel.app/review/${id}`, {
                 method : 'DELETE'
             })
             .then(res=>res.json())

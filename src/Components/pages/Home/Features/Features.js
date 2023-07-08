@@ -7,7 +7,7 @@ const Features = () => {
     const {data : sponsors=[]} = useQuery({
         queryKey : ['sponsors'],
         queryFn : async()=>{
-            const res = await fetch('http://localhost:5000/sponsor');
+            const res = await fetch('https://food-products-server.vercel.app/sponsor');
             const data =await res.json();
             return data;
         }

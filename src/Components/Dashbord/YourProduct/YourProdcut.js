@@ -11,7 +11,7 @@ const YourProdcut = () => {
     const { data: addProduct = [], refetch } = useQuery({
         queryKey: ['addProduct', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/product?email=${user?.email}`,{
+            const res = await fetch(`https://food-products-server.vercel.app/product?email=${user?.email}`,{
                 headers : {
                     authoriZation : `bearer ${localStorage.getItem('accessToken')}`
                 }
@@ -24,7 +24,7 @@ const YourProdcut = () => {
     const handelDelete = (id) =>{
         const proceeed = window.confirm(`Do you really want to delete this product?`);
         if(proceeed){
-            fetch(`http://localhost:5000/product/${id}`, {
+            fetch(`https://food-products-server.vercel.app/product/${id}`, {
                 method : 'DELETE'
             })
             .then(res=>res.json())

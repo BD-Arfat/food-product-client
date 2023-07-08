@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 
 const AllUsers = () => {
 
-    const url = `http://localhost:5000/users`
+    const url = `https://food-products-server.vercel.app/users`
 
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
@@ -18,7 +18,7 @@ const AllUsers = () => {
     const handelDelete = (id) =>{
         const proceeed = window.confirm(`Do you really want to delete this product?`);
         if(proceeed){
-            fetch(`http://localhost:5000/users/${id}`, {
+            fetch(`https://food-products-server.vercel.app/users/${id}`, {
                 method : 'DELETE'
             })
             .then(res=>res.json())
@@ -33,7 +33,7 @@ const AllUsers = () => {
     };
 
     const handelAdmin = (id) =>{
-        fetch(`http://localhost:5000/users/admin/${id}`,{
+        fetch(`https://food-products-server.vercel.app/users/admin/${id}`,{
             method : 'PUT',
             headers : {
                 authoriZation : `bearer ${localStorage.getItem('accessToken')}`

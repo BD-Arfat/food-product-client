@@ -85,17 +85,17 @@ export const router = createBrowserRouter([
             {
                 path : '/payment/:id',
                 element : <Payment/>,
-                loader : ({params})=>fetch(`http://localhost:5000/orders/${params.id}`)
+                loader : ({params})=>fetch(`https://food-products-server.vercel.app/orders/${params.id}`)
             },
             {
                 path: '/products/:id',
                 element: <SingleProduct />,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-products-server.vercel.app/products/${params.id}`)
             },
             {
                 path: '/drinks/:id',
                 element: <SingleDrink />,
-                loader: ({ params }) => fetch(`http://localhost:5000/drinks/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-products-server.vercel.app/drinks/${params.id}`)
             },
             {
                 path: '/about',

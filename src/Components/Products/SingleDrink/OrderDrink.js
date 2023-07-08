@@ -26,7 +26,7 @@ const OrderDrink = () => {
             serviceId: _id
         };
 
-        fetch("http://localhost:5000/reviews", {
+        fetch("https://food-products-server.vercel.app/reviews", {
             method: "POST", // or 'PUT'
             headers: {
                 "Content-Type": "application/json",

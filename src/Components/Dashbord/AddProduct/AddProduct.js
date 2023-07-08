@@ -34,7 +34,7 @@ const AddProduct = () => {
                     }
 
 
-                    fetch("http://localhost:5000/product", {
+                    fetch("https://food-products-server.vercel.app/product", {
                         method: "POST", // or 'PUT'
                         headers: {
                             "Content-Type": "application/json",

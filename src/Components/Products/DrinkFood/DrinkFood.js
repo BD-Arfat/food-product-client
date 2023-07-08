@@ -6,7 +6,7 @@ const DrinkFood = () => {
     const { data: drink = [] } = useQuery({
         queryKey: ['drink'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/drinks');
+            const res = await fetch('https://food-products-server.vercel.app/drinks');
             const data = await res.json();
             return data;
         }

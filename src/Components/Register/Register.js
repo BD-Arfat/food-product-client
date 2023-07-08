@@ -33,7 +33,7 @@ const Register = () => {
 
     const saveUser = (name, email) => {
         const user = { name, email };
-        fetch("http://localhost:5000/users", {
+        fetch("https://food-products-server.vercel.app/users", {
             method: "POST", // or 'PUT'
             headers: {
                 "Content-Type": "application/json",

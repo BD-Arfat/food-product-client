@@ -15,7 +15,7 @@ const SingleProduct = () => {
     const {data : product=[]} = useQuery({
         queryKey : ['product'],
         queryFn : async()=>{
-            const res = await fetch(`http://localhost:5000/reviews/${_id}`,{
+            const res = await fetch(`https://food-products-server.vercel.app/reviews/${_id}`,{
                 
             });
             const data =await res.json();
@@ -36,7 +36,7 @@ const SingleProduct = () => {
             email : user.email
         }
 
-        fetch("http://localhost:5000/orders", {
+        fetch("https://food-products-server.vercel.app/orders", {
             method: "POST", // or 'PUT'
             headers: {
                 "Content-Type": "application/json",

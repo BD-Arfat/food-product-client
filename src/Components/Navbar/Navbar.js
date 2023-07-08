@@ -38,7 +38,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-green-700 px-20">
+        <div className="navbar bg-green-700 lg:px-20">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,7 +48,7 @@ const Navbar = () => {
                         {items}
                     </ul>
                 </div>
-                <Link className="text-3xl font-bold text-white">Foodie-Crush</Link>
+                <Link className="text-xl lg:3xl font-bold text-white">Foodie-Crush</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -57,8 +57,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user?.uid ? <Link onClick={handelLogout} to={'/login'} className='btn btn-warning px-10'>Logout</Link> :
-                        <Link to={'/login'} className='btn btn-warning px-10'>Login</Link>
+                    user?.uid ? <Link onClick={handelLogout} to={'/login'} className='btn btn-sm btn-success px-7 md:btn-warning md:btn-md md:px-14'>Logout</Link> :
+                        <Link to={'/login'} className='btn btn-sm btn-success px-7 md:btn-warning md:btn-md md:px-14'>Login</Link>
                 }
             </div>
         </div>

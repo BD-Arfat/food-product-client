@@ -15,7 +15,7 @@ const HomeDrinkProducts = () => {
 
     return (
         <div>
-            <div className='grid grid-cols-3 w-11/12 mx-auto mt-28 gap-7'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto mt-28 gap-7'>
                 {
                     drink.map(items => <HomeDrinkProduct key={items._id} items={items} />)
                 }

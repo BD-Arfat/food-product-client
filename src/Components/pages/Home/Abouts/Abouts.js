@@ -1,6 +1,5 @@
 import React from 'react';
-import image1 from '../../../../image/chiken.png'
-import image2 from '../../../../image/chiken-fried.png'
+import image1 from '../../../../image/image-2.gif'
 
 const Abouts = () => {
     return (
@@ -8,7 +7,6 @@ const Abouts = () => {
             <div className="hero-content flex-col lg:flex-row">
                 <div className='w-1/2 lg:ps-16 relative' draggable='true'>
                 <img src={image1} alt='' className="w-4/5 rounded-lg shadow-2xl border-2 border-white h-[500px]" />
-                <img src={image2} alt='' className="w-3/5 absolute rounded-lg shadow-2xl border-2 border-white h-[320px] right-5 top-1/2" />
                 </div>
                 <div className='w-1/2 text-justify'>
                     <h1 className="text-4xl font-bold text-white">Why should you buy products from us?</h1>

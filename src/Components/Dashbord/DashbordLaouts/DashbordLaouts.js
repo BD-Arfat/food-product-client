@@ -24,9 +24,9 @@ const DashbordLaouts = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-36 h-full bg-base-200 text-base-content">
                         {/* Sidebar content here */}
-                        <li><Link to={'/dashbord'} className='text-white font-bold'>All User</Link></li>
-                        <li><Link to={'/dashbord/addProduct'} className='text-white font-bold'>Add Product</Link></li>
-                        <li><Link to={'/dashbord/yourProduct'} className='text-white font-bold'>Your Product</Link></li>
+                        <li><Link to={'/dashbord'} className='text-dark font-bold'>All User</Link></li>
+                        <li><Link to={'/dashbord/addProduct'} className='text-dark font-bold'>Add Product</Link></li>
+                        <li><Link to={'/dashbord/yourProduct'} className='text-dark font-bold'>Your Product</Link></li>
                     </ul>
 
                 </div>

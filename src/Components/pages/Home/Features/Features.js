@@ -16,8 +16,8 @@ const Features = () => {
     return (
         <div className='mt-28'>
             <div>
-                <h1 className='text-center font-bold md:text-5xl text-3xl text-white'>Those who sponsor us, have ads with us constantly</h1>
-                <p className='text-white mt-8'>the majority have suffered alteration in some form, by injected humour, <br /> or randomised words which don't look even <br /> slightly believable. </p>
+                <h1 className='text-center font-bold md:text-5xl text-3xl text-dark'>Those who sponsor us, have ads with us constantly</h1>
+                <p className='text-dark mt-8'>the majority have suffered alteration in some form, by injected humour, <br /> or randomised words which don't look even <br /> slightly believable. </p>
             </div>
 
             <div className='flex justify-evenly items-center mt-20 mb-28'>

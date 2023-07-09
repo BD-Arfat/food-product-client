@@ -51,7 +51,7 @@ const AllUsers = () => {
     return (
         <div>
             <div>
-                <h1 className='text-white font-bold text-justify ms-5 text-4xl mt-4'>All users are here</h1>
+                <h1 className='text-dark font-bold text-justify ms-5 text-4xl mt-4'>All users are here</h1>
             </div>
             <div className="overflow-x-auto mt-7">
                 <table className="table table-zebra">
@@ -69,9 +69,9 @@ const AllUsers = () => {
                         {/* row 1 */}
                         {
                             users.map((items, i) => <tr key={items._id}>
-                                {/* <th draggable='true' className='lg:font-bold text-[7px] text-white'>{i+1}</th> */}
-                                <td draggable='true' className=' md:text-[15px] lg:font-bold text-[7px] text-white'>{items.name}</td>
-                                <td draggable='true' className=' md:text-[15px] lg:font-bold text-[7px] text-white'>{items.email}</td>
+                                {/* <th draggable='true' className='lg:font-bold text-[7px] text-dark'>{i+1}</th> */}
+                                <td draggable='true' className=' md:text-[15px] lg:font-bold text-[7px] text-dark'>{items.name}</td>
+                                <td draggable='true' className=' md:text-[15px] lg:font-bold text-[7px] text-dark'>{items.email}</td>
                                 <td>{ items?.role !== 'admin' && <button onClick={()=>handelAdmin(items._id)} className='btn btn-sm btn-success text-[8px] md:text-[12px] px-[5px] md:px-[10px] py-[5px]'>Add Seller</button>}</td>
                                 <td><button onClick={()=>handelDelete(items._id)} className='btn btn-sm btn-error text-[8px] md:text-[12px] px-[5px] md:px-[10px] py-[5px]'>Delete USer</button></td>
                             </tr>)

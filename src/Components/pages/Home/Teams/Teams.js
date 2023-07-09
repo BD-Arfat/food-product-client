@@ -14,7 +14,7 @@ const Teams = () => {
     return (
         <div className='mt-28'>
             <div>
-                <h1 className='text-center font-bold text-white text-5xl'>Meet Our Team</h1>
+                <h1 className='text-center font-bold text-dark text-5xl'>Meet Our Team</h1>
                 <p className='mt-7'>the majority have suffered alteration in some form,  by injected humour, <br /> or randomised words which don't look even slightly <br />believable. </p>
             </div>
 
@@ -23,8 +23,8 @@ const Teams = () => {
                     <div className="card w-full md:w-96 bg-base-100 shadow-xl h-[500px] border-2 border-green-500">
                         <figure><img src={arfat} alt="Shoes" className='h-[300px] w-full' /></figure>
                         <div className="card-body">
-                            <h2 className="text-3xl font-bold text-white text-center">Name : Ariful islam</h2>
-                            <p className='text-white font-bold text-lg'>CEO</p>
+                            <h2 className="text-3xl font-bold text-dark text-center">Name : Ariful islam</h2>
+                            <p className='text-dark font-bold text-lg'>CEO</p>
                             <div className="card-actions justify-center">
                                 <img src={group1} alt="" />
                                 <img src={group2} alt="" />
@@ -37,8 +37,8 @@ const Teams = () => {
                     <div className="card w-full md:w-96 bg-base-100 shadow-xl h-[500px] border-2 border-green-500">
                         <figure><img src={badsha} alt="Shoes" className='h-[400px] w-full' /></figure>
                         <div className="card-body">
-                            <h2 className="text-3xl font-bold text-white text-center">Name : Badsha Uddin</h2>
-                            <p className='text-white font-bold text-lg'>Vice President</p>
+                            <h2 className="text-3xl font-bold text-dark text-center">Name : Badsha Uddin</h2>
+                            <p className='text-dark font-bold text-lg'>Vice President</p>
                             <div className="card-actions justify-center">
                                 <img src={group1} alt="" />
                                 <img src={group2} alt="" />
@@ -51,8 +51,8 @@ const Teams = () => {
                     <div className="card w-full md:w-96 bg-base-100 shadow-xl h-[500px] border-2 border-green-500">
                         <figure><img src={sadmar} alt="Shoes" className='h-[400px] w-full' /></figure>
                         <div className="card-body">
-                            <h2 className="text-3xl font-bold text-white text-center">Name : Sadman Islam</h2>
-                            <p className='text-white font-bold text-lg'>manager</p>
+                            <h2 className="text-3xl font-bold text-dark text-center">Name : Sadman Islam</h2>
+                            <p className='text-dark font-bold text-lg'>manager</p>
                             <div className="card-actions justify-center">
                                 <img src={group1} alt="" />
                                 <img src={group2} alt="" />
@@ -70,8 +70,8 @@ const Teams = () => {
                     <div className="card w-full md:w-96 bg-base-100 shadow-xl h-[500px] border-2 border-green-500">
                         <figure><img src={jidan} alt="Shoes" className='h-[400px] w-full' /></figure>
                         <div className="card-body">
-                            <h2 className="text-3xl font-bold text-white text-center">Name : Jidam islam</h2>
-                            <p className='text-white font-bold text-lg'>Finance Secretary</p>
+                            <h2 className="text-3xl font-bold text-dark text-center">Name : Jidam islam</h2>
+                            <p className='text-dark font-bold text-lg'>Finance Secretary</p>
                             <div className="card-actions justify-center">
                                 <img src={group1} alt="" />
                                 <img src={group2} alt="" />
@@ -84,8 +84,8 @@ const Teams = () => {
                     <div className="card w-full md:w-96 bg-base-100 shadow-xl h-[500px] border-2 border-green-500">
                         <figure><img src={arman} alt="Shoes" className='h-[400px] w-full' /></figure>
                         <div className="card-body">
-                            <h2 className="text-3xl font-bold text-white text-center">Name : Arman islam</h2>
-                            <p className='text-white font-bold text-lg'>secretary</p>
+                            <h2 className="text-3xl font-bold text-dark text-center">Name : Arman islam</h2>
+                            <p className='text-dark font-bold text-lg'>secretary</p>
                             <div className="card-actions justify-center">
                                 <img src={group1} alt="" />
                                 <img src={group2} alt="" />
@@ -98,8 +98,8 @@ const Teams = () => {
                     <div className="card w-full md:w-96 bg-base-100 shadow-xl h-[500px] border-2 border-green-500">
                         <figure><img src={shakib} alt="Shoes" className='h-[400px] w-full' /></figure>
                         <div className="card-body">
-                            <h2 className="text-3xl font-bold text-white text-center">Name : shakib all islam</h2>
-                            <p className='text-white font-bold text-lg'>Assistant Finance Secretary</p>
+                            <h2 className="text-3xl font-bold text-dark text-center">Name : shakib all islam</h2>
+                            <p className='text-dark font-bold text-lg'>Assistant Finance Secretary</p>
                             <div className="card-actions justify-center">
                                 <img src={group1} alt="" />
                                 <img src={group2} alt="" />

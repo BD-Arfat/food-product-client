@@ -47,7 +47,7 @@ const OrderDrink = () => {
 
     return (
         <div>
-            <h1 className='font-bold text-white mt-8 text-justify ms-10 text-4xl'>You go through food reviews</h1>
+            <h1 className='font-bold text-dark mt-8 text-justify ms-10 text-4xl'>You go through food reviews</h1>
 
             <div className="hero lg:justify-start">
                 <div className="hero-content flex-col lg:flex-row-reverse">

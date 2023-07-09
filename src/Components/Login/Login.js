@@ -54,7 +54,7 @@ const Login = () => {
                                     </label>
                                     <input type="password" {...register("password")} className="input input-bordered input-primary w-96" required />
                                 </div>
-                                <p className='mt-4 text-white text-justify'>Have you not registered yet? <Link to={'/register'} className='font-bold'>Register</Link></p>
+                                <p className='mt-4 text-dark text-justify'>Have you not registered yet? <Link to={'/register'} className='font-bold'>Register</Link></p>
                                 <input className='mt-4 w-96 btn btn-warning' type="submit" />
                                 <div className="divider">OR</div>
                                 <button className='w-96 btn btn-warning btn-outline'>GOOGLE</button>

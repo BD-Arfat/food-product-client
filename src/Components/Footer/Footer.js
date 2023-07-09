@@ -3,7 +3,7 @@ import logo from '../../image/pngwing.com (22).png'
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-black  text-white">
+        <footer className="footer p-10 bg-black  text-dark">
             <div>
                 <img src={logo} alt="" className='w-20' />
                 <p className=' text-justify font-bold text-lg'>Food-Food<br />Providing reliable tech since 2020</p>

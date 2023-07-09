@@ -20,8 +20,8 @@ const ProductsLayouts = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-40 h-full bg-base-200 text-base-content">
                         {/* Sidebar content here */}
-                        <li><Link to={'/products'} className='font-bold text-white'>Food Products</Link></li>
-                        <li><Link to={'/products/drinkProducts'} className='font-bold text-white'>Drink Products</Link></li>
+                        <li><Link to={'/products'} className='font-bold text-dark'>Food Products</Link></li>
+                        <li><Link to={'/products/drinkProducts'} className='font-bold text-dark'>Drink Products</Link></li>
                     </ul>
 
                 </div>

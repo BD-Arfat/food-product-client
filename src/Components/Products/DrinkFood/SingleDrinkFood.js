@@ -10,8 +10,8 @@ const SingleDrinkFood = ({items}) => {
                 <img src={image} alt="Shoes" className="rounded-xl h-[110px]" />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title font-bold text-white">Name : {name}</h2>
-                <p className='font-bold text-white'>Price : {price}$</p>
+                <h2 className="card-title font-bold text-dark">Name : {name}</h2>
+                <p className='font-bold text-dark'>Price : {price}$</p>
                 <div className="rating">
                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />

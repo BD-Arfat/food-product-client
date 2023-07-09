@@ -49,33 +49,33 @@ const OrderProduct = () => {
         <div>
             <h1 className='font-bold text-white mt-8 text-justify ms-10 text-4xl'>You go through food reviews</h1>
 
-            <div className="hero justify-start">
+            <div className="hero lg:justify-start">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <form onSubmit={handelSubmit} className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
+                    <form onSubmit={handelSubmit} className="card flex-shrink-0 w-full lg:w-full shadow-2xl bg-base-100">
                         <div className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">User Name</span>
                                 </label>
-                                <input type="text" name='userName'placeholder="Type here" className="input input-bordered input-warning w-96" required  />
+                                <input type="text" name='userName'placeholder="Type here" className="input input-bordered input-warning w-full lg:w-96" required  />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Product Name</span>
                                 </label>
-                                <input type="text" name='name' defaultValue={name} disabled placeholder="Type here" className="input input-bordered input-warning w-96" />
+                                <input type="text" name='name' defaultValue={name} disabled placeholder="Type here" className="input input-bordered input-warning w-full lg:w-96" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name='email' defaultValue={user?.email} disabled placeholder="Type here" className="input input-bordered input-warning w-96" />
+                                <input type="email" name='email' defaultValue={user?.email} disabled placeholder="Type here" className="input input-bordered input-warning w-full lg:w-96" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Let us know what you think</span>
                                 </label>
-                                <textarea name='review' type='text' className="textarea textarea-warning w-96" required placeholder="Write a review"></textarea>
+                                <textarea name='review' type='text' className="textarea textarea-warning w-full lg:w-96" required placeholder="Write a review"></textarea>
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-warning">Submit</button>

@@ -58,22 +58,22 @@ const AllUsers = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th className='font-bold text-error text-xl'></th>
-                            <th className='font-bold text-error text-xl'>Users Name</th>
-                            <th className='font-bold text-error text-xl'>Users Email</th>
-                            <th className='font-bold text-error text-xl'>Create a seller</th>
-                            <th className='font-bold text-error text-xl'>Delete User</th>
+                            {/* <th className='font-bold text-error lg:text-xl'></th> */}
+                            <th className='font-bold text-error text-[8px] md:text-xl lg:text-xl'>Users Name</th>
+                            <th className='font-bold text-error text-[8px] md:text-xl lg:text-xl'>Users Email</th>
+                            <th className='font-bold text-error text-[8px] md:text-xl lg:text-xl'>Create a seller</th>
+                            <th className='font-bold text-error text-[8px] md:text-xl lg:text-xl'>Delete User</th>
                         </tr>
                     </thead>
                     <tbody>
                         {/* row 1 */}
                         {
                             users.map((items, i) => <tr key={items._id}>
-                                <th className='font-bold text-white'>{i+1}</th>
-                                <td className='font-bold text-white'>{items.name}</td>
-                                <td className='font-bold text-white'>{items.email}</td>
-                                <td>{ items?.role !== 'admin' && <button onClick={()=>handelAdmin(items._id)} className='btn btn-sm btn-success'>Add Seller</button>}</td>
-                                <td><button onClick={()=>handelDelete(items._id)} className='btn btn-sm btn-error'>Delete USer</button></td>
+                                {/* <th draggable='true' className='lg:font-bold text-[7px] text-white'>{i+1}</th> */}
+                                <td draggable='true' className=' md:text-[15px] lg:font-bold text-[7px] text-white'>{items.name}</td>
+                                <td draggable='true' className=' md:text-[15px] lg:font-bold text-[7px] text-white'>{items.email}</td>
+                                <td>{ items?.role !== 'admin' && <button onClick={()=>handelAdmin(items._id)} className='btn btn-sm btn-success text-[8px] md:text-[12px] px-[5px] md:px-[10px] py-[5px]'>Add Seller</button>}</td>
+                                <td><button onClick={()=>handelDelete(items._id)} className='btn btn-sm btn-error text-[8px] md:text-[12px] px-[5px] md:px-[10px] py-[5px]'>Delete USer</button></td>
                             </tr>)
                         }
                     </tbody>

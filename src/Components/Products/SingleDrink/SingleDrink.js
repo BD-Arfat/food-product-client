@@ -52,21 +52,21 @@ const SingleDrink = () => {
     }
 
     return (
-        <div draggable='true' className='mb-20'><h1 className='text-white font-bold text-4xl mt-5'>Here are all the details of our products</h1>
-            <div className='flex justify-between mt-16'>
+        <div draggable='true' className='mb-20'><h1 className='text-white font-bold text-2xl lg:text-4xl mt-5'>Here are all the details of our products</h1>
+            <div className='lg:flex lg:justify-between'>
                 <div>
-                    <img src={image} className='w-[500px] h-[500px]' alt="" />
+                    <img src={image} className='lg:w-[500px] w-[200px] h-[200px] lg:h-[500px] mt-8' alt="" />
                     <h1 className='text-white font-bold text-2xl text-justify ms-10'>Name : {name} </h1>
                     <p className='text-white font-bold text-justify ms-10 text-xl mt-4'>Price : {price}$ </p>
                     <div className=' text-justify ms-10 mt-4'>
-                        <button onClick={handlerSubmit} className='w-96  btn btn-warning'>Add to cart</button>
+                        <button onClick={handlerSubmit} className='lg:w-96 w-full btn btn-warning'>Add to cart</button>
                     </div>
 
                     {/* form */}
                     <OrderDrink/>
 
                 </div>
-                <div className='w-1/2 mt-16'>
+                <div className='lg:w-1/2 mt-16'>
                    <h1 className='font-bold text-white text-4xl'>These are our reviews of this dish</h1>
                    <div className='mt-8 gap-5'>
                         {

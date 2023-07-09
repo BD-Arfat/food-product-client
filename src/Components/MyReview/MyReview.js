@@ -37,7 +37,7 @@ const MyReview = () => {
 
     return (
         <div>
-            <h1 className='font-bold text-3xl mt-4 text-white  '>Your reviews are below</h1>
+            <h1 className='font-bold md:text-3xl mt-4 text-white'>Your reviews are below</h1>
             <div className='mt-8'>
                 <div className="overflow-x-auto">
                     <table className="table">
@@ -45,21 +45,21 @@ const MyReview = () => {
                         <thead>
                             <tr>
                                 <th></th>
-                                <th className='font-bold text-white text-lg'>Name</th>
-                                <th className='font-bold text-white text-lg'>Email</th>
-                                <th className='font-bold text-white text-lg'>Review</th>
-                                <th className='font-bold text-white text-lg'>Delete</th>
+                                <th className='md:font-bold text-[9px] text-white md:text-lg'>Name</th>
+                                <th className='md:font-bold text-[9px] text-white md:text-lg'>Email</th>
+                                <th className='md:font-bold text-[9px] text-white md:text-lg'>Review</th>
+                                <th className='md:font-bold text-[9px] text-white md:text-lg'>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
                             {/* row 1 */}
                             {
                                 product.map((items, i)=><tr key={items._id}>
-                                <th>{i+1}</th>
-                                <td>{items.name}</td>
-                                <td>{items.email}</td>
-                                <td>{items.review}</td>
-                                <td><button onClick={()=>handelDelete(items._id)} className='btn btn-sm btn-error'>Delete</button></td>
+                                <th className='text-[7px] md:text-[15px] text-white'>{i+1}</th>
+                                <td className='text-[7px] md:text-[15px] text-white'>{items.name}</td>
+                                <td className='text-[7px] md:text-[15px] text-white'>{items.email}</td>
+                                <td className='text-[7px] md:text-[15px] text-white'>{items.review}</td>
+                                <td><button onClick={()=>handelDelete(items._id)} className='btn text-[8px] text-white btn-sm btn-error md:text-[15px]'>Delete</button></td>
                             </tr>)
                             }
                         </tbody>

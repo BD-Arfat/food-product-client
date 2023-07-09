@@ -59,8 +59,8 @@ const AddProduct = () => {
     return (
         <div>
             <div>
-                <h1 className='text-white font-bold ms-5 mt-4 text-4xl text-justify'>Please add your product</h1>
-                <p className='mt-8 font-bold text-white'>You can't add any drink products because these are brand products. <br /> If you add, we will be forced to remove you from our website. Thank you</p>
+                <h1 className='text-white text-3xl mt-9 font-bold lg:ms-5 lg:mt-4 lg:text-4xl lg:text-justify'>Please add your product</h1>
+                <p className='mt-8 md:font-bold text-white'>You can't add any drink products because these are brand products. <br /> If you add, we will be forced to remove you from our website. Thank you</p>
             </div>
             <div className="hero justify-start">
                 <div className="hero-content flex-col lg:flex-row-reverse">

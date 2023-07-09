@@ -1,6 +1,5 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-import { Link } from 'react-router-dom';
 import FoodProduct from './FoodProduct';
 const FoodProducts = () => {
     const {data : product=[]} = useQuery({

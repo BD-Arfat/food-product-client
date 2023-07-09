@@ -6,7 +6,7 @@ const Abouts = () => {
         <div className="hero md:mt-36 mb-48">
             <div className="hero-content flex-col lg:flex-row">
                 <div className='lg:w-1/2 lg:ps-16 relative' draggable='true'>
-                <img src={image1} alt='' className="lg:w-4/5 w-full rounded-lg shadow-2xl border-2 border-white lg:h-[500px]" />
+                <img src={image1} alt='' className="lg:w-4/5 w-full mx-auto rounded-lg shadow-2xl border-2 border-white lg:h-[500px]" />
                 </div>
                 <div className='lg:w-1/2 text-justify'>
                     <h1 className="md:text-4xl font-bold text-2xl text-white">Why should you buy products from us?</h1>

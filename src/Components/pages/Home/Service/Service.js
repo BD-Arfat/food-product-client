@@ -5,7 +5,7 @@ import image3 from '../../../../image/contact.png'
 
 const Service = () => {
     return (
-        <div className='md:flex justify-around items-center bg-black mt-36 mb-28 p-14 md:mx-28 rounded-xl'>
+        <div className='md:flex justify-around mx-2 items-center bg-black mt-36 mb-28 p-14 md:mx-28 rounded-xl'>
             <div className='flex items-center mt-4 mb-7'>
                 <img src={image1} className='w-10 h-10' alt="" />
                 <div className=' text-justify ms-4'>

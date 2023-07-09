@@ -89,12 +89,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/products/:id',
-                element: <SingleProduct />,
+                element: <PrivetRouters><SingleProduct /></PrivetRouters>,
                 loader: ({ params }) => fetch(`https://food-products-server.vercel.app/products/${params.id}`)
             },
             {
                 path: '/drinks/:id',
-                element: <SingleDrink />,
+                element: <PrivetRouters><SingleDrink /></PrivetRouters>,
                 loader: ({ params }) => fetch(`https://food-products-server.vercel.app/drinks/${params.id}`)
             },
             {

@@ -23,7 +23,7 @@ const Products = () => {
                     product.map(items => <SingelProduct key={items._id} items={items}></SingelProduct>)
                 }
             </div>
-            <Link to={'/products'} className='btn btn-warning w-96 lg:w-96 mx-auto mt-11'>More Products</Link>
+            <Link to={'/products'} className='btn btn-warning md:w-96 mx-auto mt-11'>More Products</Link>
         </div>
     );
 };

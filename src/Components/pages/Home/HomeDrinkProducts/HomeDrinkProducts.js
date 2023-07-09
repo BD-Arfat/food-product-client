@@ -21,7 +21,7 @@ const HomeDrinkProducts = () => {
                 }
             </div>
             <div>
-                <Link to={'/products/drinkProducts'} className='btn btn-warning w-96 mx-auto mt-11'>See More</Link>
+                <Link to={'/products/drinkProducts'} className='btn btn-warning md:w-96 mx-auto mt-11'>See More</Link>
             </div>
         </div>
     );

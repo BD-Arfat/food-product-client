@@ -5,7 +5,7 @@ const HomeDrinkProduct = ({items}) => {
     const { name, price, image, _id } = items;
 
     return (
-        <div className="card w-96 bg-base-100 shadow-2xl border-2 border-orange-600">
+        <div className="card w-full md:w-96 bg-base-100 shadow-2xl border-2 border-orange-600">
             <figure className="px-10 pt-10">
                 <img src={image} alt="Shoes" className="rounded-xl h-[110px]" />
             </figure>

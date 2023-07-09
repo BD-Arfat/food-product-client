@@ -9,22 +9,22 @@ const Service = () => {
             <div className='flex items-center mt-4 mb-7'>
                 <img src={image1} className='w-10 h-10' alt="" />
                 <div className=' text-justify ms-4'>
-                <h1 className='text-dark font-bold text-lg'>We are open monday-friday</h1>
-                <h1 className='font-bold'>7:00 am - 9:00 pm</h1>
+                <h1 className='text-white font-bold text-lg'>We are open monday-friday</h1>
+                <h1 className='font-bold text-white'>7:00 am - 9:00 pm</h1>
                 </div>
             </div>
             <div className='flex items-center mt-7 mb-7'>
                 <img src={image3} className='w-10 h-10' alt="" />
                 <div className=' text-justify ms-4'>
-                <h1 className='text-dark font-bold text-lg'>Have a question?</h1>
-                <h1 className='font-bold'>+2546 251 2658</h1>
+                <h1 className='text-white font-bold text-lg'>Have a question?</h1>
+                <h1 className='font-bold text-white'>+2546 251 2658</h1>
                 </div>
             </div>
             <div className='flex items-center mt-7 mb-5'>
                 <img src={image2} className='w-10 h-10' alt="" />
                 <div className=' text-justify ms-4'>
-                <h1 className='text-dark font-bold text-lg'>Need a repair? our address</h1>
-                <h1 className='font-bold'>Bangladesh, Chottogram</h1>
+                <h1 className='text-white font-bold text-lg'>Need a repair? our address</h1>
+                <h1 className='font-bold text-white'>Bangladesh, Chottogram</h1>
                 </div>
             </div>
         </div>

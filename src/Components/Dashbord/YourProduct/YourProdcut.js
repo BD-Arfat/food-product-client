@@ -50,7 +50,7 @@ const YourProdcut = () => {
                                 {/* <th className='font-bold text-dark'></th> */}
                                 <th className='font-bold text-error text-[8px] md:text-xl lg:text-xl'>Products Image</th>
                                 <th className='font-bold text-error text-[8px] md:text-xl lg:text-xl'>Products Name</th>
-                                <th className='font-bold text-error text-[8px] md:text-xl lg:text-xl'>Your Email</th>
+                                {/* <th className='font-bold text-error text-[8px] md:text-xl lg:text-xl'>Your Email</th> */}
                                 <th className='font-bold text-error text-[8px] md:text-xl lg:text-xl'>Product Price</th>
                                 {/* <th className='font-bold text-error text-[8px] md:text-xl lg:text-xl'>Buy Product</th> */}
                                 <th className='font-bold text-error text-[8px] md:text-xl lg:text-xl'>Delete Product</th>
@@ -69,7 +69,7 @@ const YourProdcut = () => {
                                         </div>
                                     </td>
                                     <td className=' md:text-[15px] lg:font-bold text-[7px] text-dark'>{items.name}</td>
-                                    <td className=' md:text-[15px] lg:font-bold text-[7px] text-dark'>{items.email}</td>
+                                    {/* <td className=' md:text-[15px] lg:font-bold text-[7px] text-dark'>{items.email}</td> */}
                                     <td className=' md:text-[15px] lg:font-bold text-[7px] text-dark'>{items.price}$</td>
                                     {/* <td><Link to={`/products/${items._id}`} className='btn btn-sm btn-success text-[8px] md:text-[12px] px-[5px] md:px-[10px] py-[5px]'>Buy Now</Link></td> */}
                                     <td><button onClick={()=>handelDelete(items._id)} className='btn btn-sm btn-error text-[8px] md:text-[12px] px-[5px] md:px-[10px] py-[5px]'>Delete</button></td>

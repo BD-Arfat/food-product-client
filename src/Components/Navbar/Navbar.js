@@ -6,7 +6,7 @@ import useAdmin from '../../Hooks/UseAdmin';
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext)
     const [isAdmin] = useAdmin(user?.email)
-    const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
+    const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'acid');
 
     useEffect(()=>{
         localStorage.setItem('theme', theme);
@@ -16,22 +16,22 @@ const Navbar = () => {
 
     const handleToggle = (e) =>{
         if(e.target.checked){
-            setTheme('black')
+            setTheme('dracula')
         }
         else{
-            setTheme('light')
+            setTheme('acid')
         }
     }
 
     const items = <>
-        <li className='text-dark font-bold'><Link to={'/'}>Home</Link></li>
-        <li className='text-dark font-bold'><Link to={'/about'}>Abouts</Link></li>
-        <li className='text-dark font-bold'><Link to={'/products'}>products</Link></li>
+        <li className=' text-luxury font-bold'><Link to={'/'}>Home</Link></li>
+        <li className=' text-luxury font-bold'><Link to={'/about'}>Abouts</Link></li>
+        <li className=' text-luxury font-bold'><Link to={'/products'}>products</Link></li>
 
         {
             user?.uid ? <>
-                <li className='text-dark font-bold'><Link to={'/myReview'}>My Reviews</Link></li>
-                <li className='text-dark font-bold'><Link to={'/myOrder'}>My Orders</Link></li>
+                <li className=' text-luxury font-bold'><Link to={'/myReview'}>My Reviews</Link></li>
+                <li className=' text-luxury font-bold'><Link to={'/myOrder'}>My Orders</Link></li>
 
             </> :
                 null
@@ -39,7 +39,7 @@ const Navbar = () => {
         {
             isAdmin &&
             <>
-                <li className='text-dark font-bold'><Link to={'/dashbord'}>Dashbord</Link></li>
+                <li className=' text-luxury font-bold'><Link to={'/dashbord'}>Dashbord</Link></li>
             </>
 
         }
@@ -64,7 +64,7 @@ const Navbar = () => {
                         {items}
                     </ul>
                 </div>
-                <Link className="text-xl lg:3xl font-bold text-dark">Foodie-Crush</Link>
+                <Link className="text-xl lg:3xl font-bold  text-luxury">Foodie-Crush</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

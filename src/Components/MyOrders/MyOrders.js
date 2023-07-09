@@ -40,7 +40,7 @@ const MyOrders = () => {
     return (
         <div>
             <h1 className='md:text-4xl text-2xl font-bold text-dark mt-16'>Everything you ordered is here</h1>
-            <h1 className='text-dark mt-8 font-bold mg:text-3xl'>You have added {orders.length} products</h1>
+            <h1 className='text-dark mt-8 font-bold mg:text-3xl text-left md:text-center ms-3 md:ms-0'>You have added {orders.length} products</h1>
             <div className='mt-12'>
                 <div className="lg:mx-20">
                     <table className="table table-zebra">
@@ -50,7 +50,7 @@ const MyOrders = () => {
                                 {/* <th></th> */}
                                 <th className='md:font-bold text-[5px] text-dark md:text-lg'>Image</th>
                                 <th className='md:font-bold text-[5px] text-dark md:text-lg'>Name</th>
-                                <th className='md:font-bold text-[5px] text-dark md:text-lg'>Email</th>
+                                {/* <th className='md:font-bold text-[5px] text-dark md:text-lg'>Email</th> */}
                                 <th className='md:font-bold text-[5px] text-dark md:text-lg'>Price</th>
                                 <th className='md:font-bold text-[5px] text-dark md:text-lg'>Delete</th>
                                 <th className='md:font-bold text-[5px] text-dark md:text-lg'>Payments</th>
@@ -62,12 +62,12 @@ const MyOrders = () => {
                                 orders.map((items, i) => <tr key={items._id}>
                                     {/* <th className='text-[7px] md:text-[15px] text-dark'>{i + 1}</th> */}
                                     <th className=''><div className="avatar">
-                                        <div className="md:w-12 rounded-full">
+                                        <div className="md:w-12 w-8 rounded-full">
                                             <img src={items.image} alt='' />
                                         </div>
                                     </div></th>
                                     <td className='text-[5px] font-bold md:text-[15px] text-dark'>{items.name}</td>
-                                    <td className='text-[5px] font-bold md:text-[15px] text-dark'>{items.email}</td>
+                                    {/* <td className='text-[5px] font-bold md:text-[15px] text-dark'>{items.email}</td> */}
                                     <td className='text-[5px] font-bold md:text-[15px] text-dark'>{items.price}$</td>
                                     <td className=''><button onClick={()=>hendelDelete(items._id)} className='btn text-[5px] text-dark btn-sm btn-error md:text-[15px]'>Delete</button></td>
                                     <td><Link to={`/payment/${items._id}`}  className='btn text-[5px] text-dark btn-sm py-[5px] btn-success md:text-[15px]'>Payment</Link></td>

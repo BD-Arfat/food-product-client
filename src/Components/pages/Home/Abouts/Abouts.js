@@ -3,7 +3,7 @@ import image1 from '../../../../image/image-2.gif'
 
 const Abouts = () => {
     return (
-        <div className="hero md:mt-36 mb-48">
+        <div className="hero md:mt-36 md:mb-48 mb-24">
             <div className="hero-content flex-col lg:flex-row">
                 <div className='lg:w-1/2 lg:ps-16 relative' draggable='true'>
                 <img src={image1} alt='' className="lg:w-4/5 w-full mx-auto rounded-lg shadow-2xl border-2 border-white lg:h-[500px]" />

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../Context/AuthProvider';
 import { toast } from 'react-hot-toast';
-import form from '../../image/form.png'
+import form from '../../image/register.gif'
 import { Link, useNavigate } from 'react-router-dom';
 import useToken from '../../Hooks/UseToken';
 
@@ -52,25 +52,25 @@ const Register = () => {
 
     
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero">
             <div className="hero-content flex-col lg:flex-row">
-                <img draggable='true' src={form} className="-w-1/2 rounded-lg shadow-2xl" alt='' />
+                <img draggable='true' src={form} className=" w-full mt-8 md:w-full mx-auto md:-w-1/2 rounded-lg shadow-2xl" alt='' />
                 <div>
-                    <div className="hero ">
+                    <div className="hero w-full">
                         <div className="hero-content flex-col lg:flex-row-reverse">
                             <form onSubmit={handleSubmit(handlelRegister)}>
-                                <div className="form-control w-full max-w-xs">
+                                <div className="form-control w-full">
                                     <label className="label">
                                         <span className="label-text">Name</span>
                                     </label>
-                                    <input type="texl" {...register("name")} className="input input-bordered input-primary w-96" required />
+                                    <input type="texl" {...register("name")} className="input input-bordered input-primary w-full md:w-96" required />
                                 </div>
 
-                                <div className="form-control w-full max-w-xs">
+                                <div className="form-control w-full">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="email" {...register("email")} className="input input-bordered input-primary w-96" required />
+                                    <input type="email" {...register("email")} className="input input-bordered input-primary w-full md:w-96" required />
                                 </div>
 
 
@@ -78,12 +78,12 @@ const Register = () => {
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" {...register("password")} className="input input-bordered input-primary w-96" required />
+                                    <input type="password" {...register("password")} className="input input-bordered input-primary w-full md:w-96" required />
                                 </div>
-                                <p className='mt-4 text-dark text-justify'>Are you already registered? <Link to={'/login'} className='font-bold'>Register</Link></p>
-                                <input className='mt-4 w-96 btn btn-warning' type="submit" />
+                                <p className='mt-4 text-dark text-justify'>Are you already registered? <Link to={'/login'} className='font-bold'>Login</Link></p>
+                                <input className='mt-4 w-full md:w-96 btn btn-warning' type="submit" />
                                 <div className="divider">OR</div>
-                                <button className='w-96 btn btn-warning btn-outline'>GOOGLE</button>
+                                <button className=' w-full md:w-96 btn btn-warning btn-outline'>GOOGLE</button>
                             </form>
                         </div>
                     </div>

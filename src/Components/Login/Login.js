@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import form from '../../image/form.png'
+import form from '../../image/login-form.gif'
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import { useForm } from 'react-hook-form';
@@ -33,31 +33,31 @@ const Login = () => {
     }
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div draggable='true' className="hero md:my-20">
             <div className="hero-content flex-col lg:flex-row">
-                <img draggable='true' src={form} className="-w-1/2 rounded-lg shadow-2xl" alt='' />
-                <div>
-                    <div className="hero ">
+                <img  src={form} className=" w-full mt-8 md:w-full mx-auto md:-w-1/2 rounded-lg shadow-2xl" alt='' />
+                <div className='w-full'>
+                    <div className="hero md:w-1/2">
                         <div className="hero-content flex-col lg:flex-row-reverse">
-                            <form onSubmit={handleSubmit(handleLogin)}>
-                                <div className="form-control w-full max-w-xs">
+                            <form className="" onSubmit={handleSubmit(handleLogin)}>
+                                <div className="form-control w-full md:w-full ">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="email" {...register("email")} className="input input-bordered input-primary w-96" required />
+                                    <input type="email" {...register("email")} className="input input-bordered input-primary w-full md:w-96" required />
                                 </div>
 
 
-                                <div className="form-control w-full max-w-xs">
+                                <div className="form-control w-full">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" {...register("password")} className="input input-bordered input-primary w-96" required />
+                                    <input type="password" {...register("password")} className="input input-bordered input-primary w-full md:w-96" required />
                                 </div>
                                 <p className='mt-4 text-dark text-justify'>Have you not registered yet? <Link to={'/register'} className='font-bold'>Register</Link></p>
-                                <input className='mt-4 w-96 btn btn-warning' type="submit" />
+                                <input className='mt-4 w-full md:w-96 btn btn-warning' type="submit" />
                                 <div className="divider">OR</div>
-                                <button className='w-96 btn btn-warning btn-outline'>GOOGLE</button>
+                                <button className='md:w-96 w-full btn btn-warning btn-outline'>GOOGLE</button>
                             </form>
                         </div>
                     </div>

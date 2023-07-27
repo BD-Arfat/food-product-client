@@ -57,6 +57,7 @@ const AddProduct = () => {
     }
 
     return (
+        // start Add Products
         <div>
             <div>
                 <h1 className='text-dark text-3xl mt-9 font-bold lg:ms-5 lg:mt-4 lg:text-4xl lg:text-justify'>Please add your product</h1>
@@ -115,6 +116,7 @@ const AddProduct = () => {
                 </div>
             </div>
         </div>
+// End Add Products
     );
 };
 

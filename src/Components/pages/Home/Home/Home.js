@@ -10,12 +10,19 @@ import Features from '../Features/Features';
 const Home = () => {
     return (
         <div>
+        // Carasoul
             <Carasoul/>
+        // Abouts
             <Abouts/>
+        // Products
             <Products/>
+        // Service
             <Service/>
+        // HOmeDrinkProducts
             <HomeDrinkProducts/>
+        // Teams
             <Teams/>
+        // Features
             <Features/>
         </div>
     );

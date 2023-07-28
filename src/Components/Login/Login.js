@@ -14,6 +14,7 @@ const Login = () => {
     const [loginUserToken, setLoginUserToken] = useState('');
     const [token] = useToken(loginUserToken);
 
+    // Navigation
     if(token){
         navigate('/')
     }
@@ -33,6 +34,7 @@ const Login = () => {
     }
 
     return (
+        // start Login Form
         <div draggable='true' className="hero md:my-20">
             <div className="hero-content flex-col lg:flex-row">
                 <img  src={form} className=" w-full mt-8 md:w-full mx-auto md:-w-1/2 rounded-lg shadow-2xl" alt='' />
@@ -64,6 +66,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
+    // End Login Form
     );
 };
 

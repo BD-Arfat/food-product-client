@@ -2,6 +2,7 @@ import React from 'react';
 import image from '../../image/lovly-imoji.gif'
 
 const About = () => {
+    // start about
     return (
         <div>
             <div className='flex justify-center items-center mt-10'>

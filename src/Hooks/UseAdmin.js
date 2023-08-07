@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+// userAdmin hooks
 const useAdmin = (email) =>{
     const [isAdmin, setIsAdmin] = useState(false);
     const [isAdminLoding, setIsAdminLoding] = useState(true)
